@@ -10,13 +10,14 @@ import Student from './Pages/Student/Student';
 import Faculty from './Pages/Faculty/Faculty';
 import AddStudent from './Pages/Student/AddStudent';
 import AddFaculty from './Pages/Faculty/AddFaculty';
+import checkAuth from './checkAuth';
 
 const mainRouter = createBrowserRouter([
   {path:'', Component: Login},
   { path: '/login', Component: Login },
   { path: '/signup', Component: Signup },
   {
-    path: '/dashboard', Component: Dashboard, children: [
+    path: '/dashboard', loader: checkAuth, Component: Dashboard, children: [
       {path: '',Component: home},
       { path: 'home', Component: home },
       {
