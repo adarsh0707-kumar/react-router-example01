@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import '../Style/dashboardStyle.css';
+import SideNavBar from './SideNavBar';
+import RoutingArea from './RoutingArea';
 
 const Dashboard = () => {
+
   return (
-    <div style={{ width: '100%', height: '100vh', background: 'yellow' }}>
-          <h1>dashboard Pages</h1>
+    <div className='dashboard-area'>
+      <SideNavBar />
+      <RoutingArea />
     </div>
   )
 }
