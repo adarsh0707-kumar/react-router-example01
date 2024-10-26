@@ -3,7 +3,7 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import '../Style/FacultyStyle.css'
 
 const Faculty = () => {
-    const navigate = useNavigate;
+    const navigate = useNavigate();
     const facultyListHandler = () => {
         navigate('/dashboard/faculty/faculty-list');
     }
